@@ -20,13 +20,15 @@
 		1A607F7D2CDD4BE600593D37 /* NetworkManaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A607F7C2CDD4BE600593D37 /* NetworkManaging.swift */; };
 		1A607F802CDD4EA300593D37 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A607F7F2CDD4EA300593D37 /* NetworkManagerTests.swift */; };
 		1A607F842CDD4F2C00593D37 /* RequestBuildingSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A607F832CDD4F2C00593D37 /* RequestBuildingSpy.swift */; };
-		1A607F8A2CDD519000593D37 /* DummyEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A607F892CDD519000593D37 /* DummyEndpoint.swift */; };
+		1A607F8A2CDD519000593D37 /* MockEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A607F892CDD519000593D37 /* MockEndpoint.swift */; };
 		1A607F8C2CDD528800593D37 /* DummyCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A607F8B2CDD528800593D37 /* DummyCodable.swift */; };
 		1A607F8E2CDD5E5200593D37 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A607F8D2CDD5E5100593D37 /* URLSessionMock.swift */; };
 		1AA282062CDC0B4100CE061D /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA282052CDC0B4100CE061D /* HTTPMethod.swift */; };
 		1AA282082CDC0B6800CE061D /* MovieEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA282072CDC0B6800CE061D /* MovieEndpoint.swift */; };
 		1AA2820A2CDD230900CE061D /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA282092CDD230900CE061D /* Endpoint.swift */; };
 		1AA2820C2CDD384C00CE061D /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA2820B2CDD384C00CE061D /* RequestBuilder.swift */; };
+		1AB5313B2CDE72DE00BF8A4C /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB5313A2CDE72DE00BF8A4C /* NetworkError.swift */; };
+		1AB5313D2CDE74FD00BF8A4C /* RequestBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB5313C2CDE74FD00BF8A4C /* RequestBuilderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,13 +66,15 @@
 		1A607F7C2CDD4BE600593D37 /* NetworkManaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManaging.swift; sourceTree = "<group>"; };
 		1A607F7F2CDD4EA300593D37 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 		1A607F832CDD4F2C00593D37 /* RequestBuildingSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuildingSpy.swift; sourceTree = "<group>"; };
-		1A607F892CDD519000593D37 /* DummyEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyEndpoint.swift; sourceTree = "<group>"; };
+		1A607F892CDD519000593D37 /* MockEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEndpoint.swift; sourceTree = "<group>"; };
 		1A607F8B2CDD528800593D37 /* DummyCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyCodable.swift; sourceTree = "<group>"; };
 		1A607F8D2CDD5E5100593D37 /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
 		1AA282052CDC0B4100CE061D /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		1AA282072CDC0B6800CE061D /* MovieEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieEndpoint.swift; sourceTree = "<group>"; };
 		1AA282092CDD230900CE061D /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		1AA2820B2CDD384C00CE061D /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
+		1AB5313A2CDE72DE00BF8A4C /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		1AB5313C2CDE74FD00BF8A4C /* RequestBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,6 +268,7 @@
 				1AA282092CDD230900CE061D /* Endpoint.swift */,
 				1A607F7A2CDD4BC300593D37 /* RequestBuilding.swift */,
 				1A607F7C2CDD4BE600593D37 /* NetworkManaging.swift */,
+				1AB5313A2CDE72DE00BF8A4C /* NetworkError.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -275,6 +280,7 @@
 				1A607F852CDD50E700593D37 /* Fixtures */,
 				1A607F822CDD4F1100593D37 /* Doubles */,
 				1A607F7F2CDD4EA300593D37 /* NetworkManagerTests.swift */,
+				1AB5313C2CDE74FD00BF8A4C /* RequestBuilderTests.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -298,7 +304,7 @@
 		1A607F882CDD517D00593D37 /* Dummy */ = {
 			isa = PBXGroup;
 			children = (
-				1A607F892CDD519000593D37 /* DummyEndpoint.swift */,
+				1A607F892CDD519000593D37 /* MockEndpoint.swift */,
 				1A607F8B2CDD528800593D37 /* DummyCodable.swift */,
 			);
 			path = Dummy;
@@ -451,6 +457,7 @@
 				1A32AD672CDBF78000E04A59 /* AppDelegate.swift in Sources */,
 				1A607F7D2CDD4BE600593D37 /* NetworkManaging.swift in Sources */,
 				1A32ADA32CDC00AC00E04A59 /* MovieResponse.swift in Sources */,
+				1AB5313B2CDE72DE00BF8A4C /* NetworkError.swift in Sources */,
 				1AA282062CDC0B4100CE061D /* HTTPMethod.swift in Sources */,
 				1A32AD692CDBF78000E04A59 /* SceneDelegate.swift in Sources */,
 			);
@@ -463,7 +470,8 @@
 				1A607F8C2CDD528800593D37 /* DummyCodable.swift in Sources */,
 				1A607F842CDD4F2C00593D37 /* RequestBuildingSpy.swift in Sources */,
 				1A607F802CDD4EA300593D37 /* NetworkManagerTests.swift in Sources */,
-				1A607F8A2CDD519000593D37 /* DummyEndpoint.swift in Sources */,
+				1AB5313D2CDE74FD00BF8A4C /* RequestBuilderTests.swift in Sources */,
+				1A607F8A2CDD519000593D37 /* MockEndpoint.swift in Sources */,
 				1A607F8E2CDD5E5200593D37 /* URLSessionMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

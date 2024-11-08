@@ -9,7 +9,7 @@ final class NetworkManagerTests: XCTestCase {
     private lazy var sut = NetworkManager(requestBuilder: requestBuilderSpy, urlSession: urlSessionSpy)
 
     func test_performRequest_whenCalled_requestBuilderIsInvoked() {
-        let dummyEndpoint = DummyEndpoint()
+        let dummyEndpoint = MockEndpoint()
         sut.performRequest(endpoint: dummyEndpoint) { (result: Result<DummyCodable, Error>) in }
         
         XCTAssertTrue(requestBuilderSpy.buildRequestCalled)
@@ -17,7 +17,7 @@ final class NetworkManagerTests: XCTestCase {
     }
     
     func test_performRequest_whenRequestIsValid_performsDataTask() {
-        let dummyEndpoint = DummyEndpoint()
+        let dummyEndpoint = MockEndpoint()
         requestBuilderSpy.buildRequestToBeReturned = URLRequest(url: URL(string: "https://api.dummy.com/dummy/endpoint")!)
 
         var expectedResult: Result<DummyCodable, Error>?
@@ -44,7 +44,7 @@ final class NetworkManagerTests: XCTestCase {
     }
 
     func test_performRequest_whenRequestIsNil_returnsFailure() {
-        let dummyEndpoint = DummyEndpoint()
+        let dummyEndpoint = MockEndpoint()
         requestBuilderSpy.buildRequestToBeReturned = nil
         let expectation = self.expectation(description: "Completion should be called with failure")
         
@@ -61,7 +61,7 @@ final class NetworkManagerTests: XCTestCase {
     }
     
     func test_performRequest_whenStatusCodeIsNot200_returnsFailure() {
-        let dummyEndpoint = DummyEndpoint()
+        let dummyEndpoint = MockEndpoint()
         requestBuilderSpy.buildRequestToBeReturned = URLRequest(url: URL(string: "https://api.dummy.com/dummy/endpoint")!)
         
         let expectation = self.expectation(description: "Completion should be called with failure")
@@ -83,7 +83,7 @@ final class NetworkManagerTests: XCTestCase {
     }
     
     func test_performRequest_whenDecodingFails_returnsFailure() {
-        let dummyEndpoint = DummyEndpoint()
+        let dummyEndpoint = MockEndpoint()
         requestBuilderSpy.buildRequestToBeReturned = URLRequest(url: URL(string: "https://api.dummy.com/dummy/endpoint")!)
         let invalidJSONData = "{ \"invalidKey\": \"invalidValue\" }".data(using: .utf8)
         
